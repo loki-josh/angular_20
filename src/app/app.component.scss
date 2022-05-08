@@ -1,6 +1,79 @@
-.success{
-    color: green;
+.row_1 {
+    margin-top: 2px;
+    color: #fff;
+    background-color: navy;
+    padding: 20px;
+    text-align: center;
 }
-.error{
-    color: red;
+
+.header_ele:hover {
+    color: aqua;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.side_nav {
+    background-color: rgb(56, 54, 54);
+    color: #fff;
+    text-align: center;
+}
+
+
+
+.side_nav_ele {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.side_nav_ele:hover {
+    background-color: rgb(58, 57, 57);
+    display: inline;
+    color: aquamarine;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.name_input_lable{
+    background-color: none;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: #060aff;
+}
+.name_input_box{
+    background-color: transparent;
+    // background-color : #ddefa1d3;
+    color: white;
+    font-size: 17x;
+    border:solid blue 2px;
+    border-radius: 10px;
+    text-align: center;
+}
+.button1{
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.button1:hover{
+    background-color: green;
+}
+.user_name_disply{
+    color: white;
+    margin-top: 20px;
+    margin-left: 100px;
+    font-size: 25px;
+    text-align: center;
+}
+::placeholder{
+    color: white;
+}
+.thead-head{
+    color: white;
+    background-color: black;
+}
+td{
+    color: #fff;
+}
+.btn{
+    background-color:transparent; 
+    border: none; 
+    color: white;
 }
