@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,20 +8,34 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-project';
-  user:any;
-  showMassage:any;
-  isboolian:boolean=true;
-  attributedirectives:any;
-  objectarray:any
-  objectarray1:any;
+  user_name: any;
+  displayVal = '';
+  
+  value = '';
+  userlist:any;
 
-  constructor(){
-    this.objectarray = ["lokesh","rajesh","rakesh","suresh","ramesh","ganesh"]
-    this.objectarray1= [{name:"john", age:"23"},{name:"kishor",age :"30"},{name:"john", age:"23"}]
+  constructor(private router:Router) {
+    this.userlist=[];
+
   }
-  myfucntion(envent:any){
-    window.alert("login successfull")
-    this.showMassage=true;
+
+  userName(val: any) {
+    console.warn(val)
+    this.displayVal = val
   }
+  myfunction() {
+    this.userlist.push(this.value);
+    this.value='';
+  }
+  ondelete(userno: any){
+    this.userlist.splice(userno, 1)
+  }
+  navigate_h(){
+    this.router.navigate(['/home'])
+  }
+  navigate_p(){
+    this.router.navigate(['/products'])
+  }
+
 }
 

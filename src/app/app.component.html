@@ -1,23 +1,87 @@
+<!-- header -->
 
-<input type="text" [(ngModel)]="user">
-<h2 *ngIf= "showMassage">the user is not existed !</h2>
-<button (click)="myfucntion($event)">click me</button>
+<body background="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg">
+  <div class="row row_1">
+    <div class="col-8">
+      <div class="row">
+        <div class="col header_ele">
+          <button class="btn" (click)="navigate_h()">HOME</button>
+        </div>
+        <div class="col header_ele">
+          <button class="btn" (click)="navigate_p()">PRODUCTS</button>
+        </div>
+        <div class="col header_ele">FIND US</div>
+        <div class="col header_ele">SUSTAINABILTIY</div>
+        <div class="col header_ele">BLOG</div>
+        <div class="col header_ele">CONTACT</div>
+      </div>
+    </div>
+  </div>
+  <!-- side nav -->
+  <div class="row">
+    <div class="col-2 side_nav">
+      <div class="side_nav_ele">CHOCOLATE</div>
+      <div class="side_nav_ele">VANILLA</div>
+      <div class="side_nav_ele">BUTTER PECAN</div>
+      <div class="side_nav_ele">STRAWBERRY</div>
+      <div class="side_nav_ele">PISTACHIO</div>
+      <div class="side_nav_ele">CHOCOLATE CHIP</div>
+      <div class="side_nav_ele">ROCKY ROAD</div>
+      <div class="side_nav_ele">COOKIE DOUGH</div>
+      <div class="side_nav_ele">PEACH</div>
+      <div class="side_nav_ele">COCONUT</div>
+      <div class="side_nav_ele">CARAMEL</div>
+      <div class="side_nav_ele">PINEAPPLE</div>
+      <div class="side_nav_ele">PEANUT BUTTER</div>
+      <div class="side_nav_ele">EGGNOG</div>
+      <div class="side_nav_ele">VANILLA</div>
+      <div class="side_nav_ele">MINT CHOCOLATE </div>
+    </div>
 
-<h1>{{attributedirectives}}</h1>
-<div [ngClass] ="isboolian? 'success' : 'error'" >
-<h1>This is the example of ngclass</h1>
-</div>
-
-<h4>This is one object</h4>
-<div *ngFor= "let item of objectarray; let i= index; ">
-
-  <p style="margin-left: 5px;">{{i+1}}&nbsp;&nbsp;&nbsp;{{item}}</p>
-
-  
-</div>
-<h4>This is another object</h4>
-<div *ngFor= "let item1 of objectarray1; let x= index">
-  <p style="margin-left: 5px;">{{x+1}}&nbsp;&nbsp;&nbsp;{{item1.name}}&nbsp;&nbsp;&nbsp;{{item1.age}}</p>
+    <!-- section 1 -->
 
 
-</div>
+    <div class="col-4 name_input_lable">
+      <label for="input">
+        <h3>Enter your name :</h3>
+      </label>
+      <input class="name_input_box" type="text" #box name="username" placeholder="Enter name">
+      <button class="button1" (click)="userName(box.value)">click me</button>
+
+
+      <!-- ordering input -->
+      <div style="margin: 100px;">
+        <input class="name_input_box" type="text" [(ngModel)]="value" placeholder="ORDER HERE">
+        <button class="button1" (click)="myfunction()">Add item</button>
+      </div>
+
+    </div>
+    <!-- section 2 -->
+    <div class="col-4 user_name_disply">
+      <h3>Hii.. <h2><i style="color: purple ;">{{displayVal}}</i></h2> Welcome !!!</h3>
+      <div class="row">
+        <div class="col">
+
+        </div>
+      </div>
+      <div>
+        <table class="table table-borderd mt-5">
+          <thead class="thead-head">
+            <tr>
+              <td>s.no</td>
+              <td>item name</td>
+              <td>delete</td>
+            </tr>
+          </thead>
+          <tr *ngFor="let items of userlist; index as userno" style="margin-top:10px ;">
+            <td>{{userno+1}}</td>
+            <td> {{items}}</td>
+            <td>
+              <button class="button1" (click)="ondelete(userno)">Remove</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
